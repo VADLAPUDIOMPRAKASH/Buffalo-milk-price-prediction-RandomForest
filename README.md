@@ -62,6 +62,12 @@ This project is a Flask-based web application that predicts the price of buffalo
 - **SNF**: Solid-Not-Fat percentage in the milk.
 - **FAT**: Fat percentage in the milk.
 
+![image](https://github.com/user-attachments/assets/fe0dac2a-9c40-42fa-89fc-edfa7b4dc22d)
+
+![image](https://github.com/user-attachments/assets/c8cf9f1b-c6e4-4e60-a8c3-785f0017f478)
+
+
+
 ### Outputs:
 - Predicted price of the milk.
 - Saved history of predictions in the `predicted.csv` file.
