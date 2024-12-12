@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <style>
+        /* CSS for navigation bar */
+        nav {
+            background-color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff8c00;
+        }
+
+        /* CSS for table */
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <section>
+        <nav>
+            <div class="logo">Rate Prediction</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/prediction">Predicted History</a></li> <!-- Corrected link -->
+                
+                
+            </ul>
+        </nav>
+
+    </section>
+    <div class="container">
+        <h1>Prediction History</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>SNF</th>
+                    <th>FAT</th>
+                    <th>Predicted Rate</th>
+                    <th>Prediction Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, row in predicted_data.iterrows() %}
+                <tr>
+                    <td>{{ row['RateDate'] }}</td>
+                    <td>{{ row['SNF'] }}</td>
+                    <td>{{ row['FAT'] }}</td>
+                    <td>{{ row['Rate'] }}</td>
+                    <td>{{ row['PredictionTime'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
