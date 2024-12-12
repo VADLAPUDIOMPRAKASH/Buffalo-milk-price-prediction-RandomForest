@@ -67,6 +67,10 @@ This project is a Flask-based web application that predicts the price of buffalo
 ![image](https://github.com/user-attachments/assets/c8cf9f1b-c6e4-4e60-a8c3-785f0017f478)
 
 
+![image](https://github.com/user-attachments/assets/8f6d824f-8562-47e9-8d15-38932091623b)
+
+
+
 
 ### Outputs:
 - Predicted price of the milk.
